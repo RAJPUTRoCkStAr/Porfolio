@@ -22,8 +22,8 @@ def make_image_round(image):
     return result
 def show_image():
     image_path = "https://raw.githubusercontent.com/RAJPUTRoCkStAr/Porfolio/main/lottie/passportsize_profile.jpeg"  
-    image = Image.open(image_path)
-    rounded_image = make_image_round(image)
+    # image = Image.open(image_path)
+    rounded_image = make_image_round(image_path)
     st.image(rounded_image, caption="Sumit Kumar Singh", use_column_width=True)
 ###########################################################################
     st.markdown("""
