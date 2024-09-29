@@ -2,8 +2,6 @@ import streamlit as st
 
 def certif():
     st.subheader("🎓 Certifications & Achievements", divider="rainbow")
-
-    # Custom CSS for styling
     st.markdown(
         """
         <style>
@@ -22,51 +20,70 @@ def certif():
             margin-bottom: 20px;
             text-align: center;  /* Center align the text and images */
         }
+        .stLinkButton button {
+                background-color: #1E9E35 !important;
+                color: white !important;
+            }
         </style>
         """,
         unsafe_allow_html=True
     )
 
-    # Function to display a single certificate
     def display_certificate(certificate_title, image_url, verification_url, unique_key):
         with st.container():
-            st.markdown(f"<div class='certificate-container'><h3>{certificate_title}</h3>", unsafe_allow_html=True)
-            st.image(image_url, use_column_width='auto')  # Centered image
-            if st.button("Verify Certificate", key=unique_key):
-                st.markdown(f"**Verification URL:** [Click Here]({verification_url})", unsafe_allow_html=True)
-            st.markdown("</div>", unsafe_allow_html=True)  # Close the certificate container
-
-    st.header("My Certificates")
-
+            st.markdown(f"<div style='display: flex; justify-content: center;' class='certificate-container'><h3>{certificate_title}</h3>", unsafe_allow_html=True)
+            st.image(image_url, use_column_width='auto') 
+            st.link_button("Verify Certificate",url=verification_url,type="primary",use_container_width=True)
+            st.markdown("</div>", unsafe_allow_html=True)
+ 
     certificates = [
         {
             "title": "Deep Learning with TensorFlow",
-            "image": "https://example.com/certificate1.png",  
+            "image": "lottie/tennsorflow.jpg",  
             "verification": "https://skills.yourlearning.ibm.com/certificate/SN-COURSE-V1:BIGDATAUNIVERSITY+ML0120EN+V2"   
         },
         {
-            "title": "Data Science Certification",
-            "image": "https://example.com/certificate2.png",  # Replace with your image URL
-            "verification": "https://example.com/verify2"  # Replace with your verification URL
+            "title": "Natural Language Processing and Computer Vision",
+            "image": "lottie/nlp.jpg",  
+            "verification": "https://skills.yourlearning.ibm.com/certificate/MDL-214"  
         },
         {
-            "title": "Advanced Diploma in IT",
-            "image": "https://example.com/certificate3.png",  # Replace with your image URL
-            "verification": "https://example.com/verify3"  # Replace with your verification URL
+            "title": "Machine Learning and Deep Learning",
+            "image": "lottie/ml_dl.jpg",  
+            "verification": "https://skills.yourlearning.ibm.com/certificate/MDL-212"  
         },
         {
-            "title": "Certificate of Excellence - Machine Learning",
-            "image": "https://example.com/certificate4.png",  # Replace with your image URL
-            "verification": "https://example.com/verify4"  # Replace with your verification URL
+            "title": "AI And Machine Learning Full Course",
+            "image": "lottie/ai_ml.jpg",  
+            "verification": "https://skills.yourlearning.ibm.com/certificate/URL-WNQKFPCPK1G"  
+        },
+        {
+            "title": "Deep Learning",
+            "image": "lottie/deep_learn.jpg",  
+            "verification": "https://skills.yourlearning.ibm.com/certificate/URL-1AE76ADD4550"  
+        },
+        {
+            "title": "Elements of AI",
+            "image": "lottie/elements_ai.jpg",  
+            "verification": "https://skills.yourlearning.ibm.com/certificate/URL-332C7DE56AB8"  
+        },
+        {
+            "title": "Data Analysis with Python",
+            "image": "lottie/data_an.jpg",  
+            "verification": "https://courses.skillsbuild.skillsnetwork.site/certificates/e18291aef7954f3e810aa7e9c610232b#"  
+        },
+        {
+            "title": "Data Visualization with Python",
+            "image": "lottie/data_vis.jpg",  
+            "verification": "https://courses.skillsbuild.skillsnetwork.site/certificates/bff44b8874ab40d0904f4f5574e0c73f#"  
         },
     ]
 
-    # Create columns for each certificate
     columns = st.columns(4)
 
-    # Loop through the certificates and display each in a column
+
     for index, cert in enumerate(certificates):
-        with columns[index % 4]:  # Use modulo to cycle through the columns
+        with columns[index % 4]: 
             display_certificate(cert["title"], cert["image"], cert["verification"], unique_key=f"verify_{index}")
 
 

@@ -10,10 +10,5 @@ def load_lottieurl(url:str):
         return None
     return r.json()
 lottie_me = load_lottiefile("lottie/Me.json")
-project = load_lottiefile("lottie/project.json")
-pyhon = load_lottiefile("lottie/pyhon.json")
-skills = load_lottiefile("lottie/skills.json")
+
 contac = load_lottiefile("lottie/connect.json")
-github = load_lottiefile("lottie/github.json")
-company = load_lottiefile("lottie/company.json")
-Certificate = load_lottiefile("lottie/Certificate.json")

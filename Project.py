@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 def proj():
     st.subheader("📂 My Work & Projects",divider="rainbow")
-    ignore_list = ['RAJPUTRoCkStAr','Ecommerce-Website','IBM-INTERNSHIP-WORK','Porfolio','choreo-artifacts','DRF','MEAN-HRM','cricketcrud-Mean','native-Ecommerce','School-Management-system','Portfolio','Poke-Desk','Netflix-Clone']
+    ignore_list = ['RAJPUTRoCkStAr','Ecommerce-Website','IBM-INTERNSHIP-WORK','Porfolio','choreo-artifacts','DRF','MEAN-HRM','cricketcrud-Mean','native-Ecommerce','School-Management-system','Portfolio','Poke-Desk','Netflix-Clone','rest_framework','lucifer']
     response = requests.get("https://api.github.com/users/RAJPUTRoCkStAr/repos")
 
     if response.status_code == 200:
