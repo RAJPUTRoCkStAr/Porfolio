@@ -4,27 +4,44 @@ from streamlit_lottie import st_lottie
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
 from Lotti import contac
+from io import BytesIO
 import streamlit as st
+import requests
 import smtplib
 import re
 import os
 load_dotenv()
 #############################################################################
+
+
 def make_image_round(image):
     width, height = image.size
     min_size = min(width, height)
     image = image.resize((min_size, min_size))
+    
+    # Create a circular mask
     mask = Image.new('L', (min_size, min_size), 0)
     draw = ImageDraw.Draw(mask)
     draw.ellipse((0, 0, min_size, min_size), fill=255)
+    
+    # Fit the image within the mask
     result = ImageOps.fit(image, (min_size, min_size), centering=(0.5, 0.5))
-    result.putalpha(mask)
+    result.putalpha(mask)  # Apply the mask to make the image round
     return result
+
 def show_image():
-    image_path = "https://raw.githubusercontent.com/RAJPUTRoCkStAr/Porfolio/main/lottie/passportsize_profile.jpeg"  
-    # image = Image.open(image_path)
-    rounded_image = make_image_round(image_path)
-    st.image(rounded_image, caption="Sumit Kumar Singh", use_column_width=True)
+    image_path = "https://raw.githubusercontent.com/RAJPUTRoCkStAr/Porfolio/main/lottie/passportsize_profile.jpeg"
+    
+    # Fetch the image from the URL
+    response = requests.get(image_path)
+    
+    if response.status_code == 200:
+        # Load the image using BytesIO
+        image = Image.open(BytesIO(response.content))
+        rounded_image = make_image_round(image)  # Pass the image object
+        st.image(rounded_image, caption="Sumit Kumar Singh", use_column_width=True)
+    else:
+        st.error("Failed to load the image. Status code: {}".format(response.status_code))
 ###########################################################################
     st.markdown("""
     <style>
