@@ -9,6 +9,5 @@ def load_lottieurl(url:str):
     if r.status_code != 200:
         return None
     return r.json()
-lottie_me = load_lottiefile("lottie/Me.json")
-
-contac = load_lottiefile("lottie/connect.json")
+lottie_me = load_lottiefile("https://raw.githubusercontent.com/RAJPUTRoCkStAr/VisionaryStocks/main/lottie/Me.json")
+contac = load_lottiefile("https://raw.githubusercontent.com/RAJPUTRoCkStAr/VisionaryStocks/main/lottie/connect.json")

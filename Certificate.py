@@ -39,42 +39,42 @@ def certif():
     certificates = [
         {
             "title": "Deep Learning with TensorFlow",
-            "image": "lottie/tennsorflow.jpg",  
+            "image": "https://raw.githubusercontent.com/RAJPUTRoCkStAr/VisionaryStocks/main/lottie/tennsorflow.jpg",  
             "verification": "https://skills.yourlearning.ibm.com/certificate/SN-COURSE-V1:BIGDATAUNIVERSITY+ML0120EN+V2"   
         },
         {
             "title": "Natural Language Processing and Computer Vision",
-            "image": "lottie/nlp.jpg",  
+            "image": "https://raw.githubusercontent.com/RAJPUTRoCkStAr/VisionaryStocks/main/lottie/nlp.jpg",  
             "verification": "https://skills.yourlearning.ibm.com/certificate/MDL-214"  
         },
         {
             "title": "Machine Learning and Deep Learning",
-            "image": "lottie/ml_dl.jpg",  
+            "image": "https://raw.githubusercontent.com/RAJPUTRoCkStAr/VisionaryStocks/main/lottie/ml_dl.jpg",  
             "verification": "https://skills.yourlearning.ibm.com/certificate/MDL-212"  
         },
         {
             "title": "AI And Machine Learning Full Course",
-            "image": "lottie/ai_ml.jpg",  
+            "image": "https://raw.githubusercontent.com/RAJPUTRoCkStAr/VisionaryStocks/main/lottie/ai_ml.jpg",  
             "verification": "https://skills.yourlearning.ibm.com/certificate/URL-WNQKFPCPK1G"  
         },
         {
             "title": "Deep Learning",
-            "image": "lottie/deep_learn.jpg",  
+            "image": "https://raw.githubusercontent.com/RAJPUTRoCkStAr/VisionaryStocks/main/lottie/deep_learn.jpg",  
             "verification": "https://skills.yourlearning.ibm.com/certificate/URL-1AE76ADD4550"  
         },
         {
             "title": "Elements of AI",
-            "image": "lottie/elements_ai.jpg",  
+            "image": "https://raw.githubusercontent.com/RAJPUTRoCkStAr/VisionaryStocks/main/lottie/elements_ai.jpg",  
             "verification": "https://skills.yourlearning.ibm.com/certificate/URL-332C7DE56AB8"  
         },
         {
             "title": "Data Analysis with Python",
-            "image": "lottie/data_an.jpg",  
+            "image": "https://raw.githubusercontent.com/RAJPUTRoCkStAr/VisionaryStocks/main/lottie/data_an.jpg",  
             "verification": "https://courses.skillsbuild.skillsnetwork.site/certificates/e18291aef7954f3e810aa7e9c610232b#"  
         },
         {
             "title": "Data Visualization with Python",
-            "image": "lottie/data_vis.jpg",  
+            "image": "https://raw.githubusercontent.com/RAJPUTRoCkStAr/VisionaryStocks/main/lottie/data_vis.jpg",  
             "verification": "https://courses.skillsbuild.skillsnetwork.site/certificates/bff44b8874ab40d0904f4f5574e0c73f#"  
         },
     ]
